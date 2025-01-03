@@ -12,22 +12,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          backgroundColor: Colors.deepPurple[200],
-          body: Center(
-            child: Container(
-              height: 300,
-              width: 300,
-              decoration: BoxDecoration(
-                color: Colors.deepPurple,
-                borderRadius: BorderRadius.circular(20),
-              ),
-              padding: EdgeInsets.all(20),
-              child: Center(
-                  child: Text('Go Go Flutter',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold, fontSize: 32))),
-            ),
-          ),
-        ));
+            body: Column(
+          children: [
+            Expanded(
+                child: Container(
+              color: Colors.deepPurple,
+            )),
+            Expanded(
+                child: Container(
+              color: Colors.deepPurple[400],
+            )),
+            Expanded(
+                child: Container(
+              color: Colors.deepPurple[200],
+            )),
+          ],
+        )));
   }
 }
